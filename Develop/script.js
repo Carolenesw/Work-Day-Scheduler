@@ -8,33 +8,31 @@ $(document).ready(function () {
 //    create variables 
 var timeSlots = moment().format('h:00');
 console.log(timeSlots)
-// var time9 = $(".time9");
-// var time10 = $(".time10");
-// var time11 = $(".time11");
-// var time12 = $(".time12");
-// var time1 = $(".time1");
-// var time2 = $(".time2");
-// var time3 = $(".time3");
-// var time4 = $(".time4");
-// var time5 = $(".time5");
+
 
 // stringify timeSlots to use in calendar time log 
 var availableTimes = timeSlots.toString();
 console.log(availableTimes)
 console.log(typeof "availableTimes");
 
+// create set start time for time slots
+var year = 2020;
+var month = 5;
+var startTime = moment( year  + '-'+ month+ '-' + 01 + ' 00:00').format('h:00 A')
+console.log(startTime)
 
-var time9 = moment().add(1, "hours").format('h:00 A');
 
+var time9 = moment().add(18, "hours").format('h:00 A');
+console.log(time9)
 // use momentjs to increment time by 1 hour each for timeslots
-var time10 = moment().add(2, "hours").format('h:00 A');
-var time11 = moment().add(3, "hours").format('h:00 A');
-var time12 = moment().add(4, "hours").format('h:00 A');
-var time1 = moment().add(5, "hours").format('h:00 A');
-var time2 = moment().add(6, "hours").format('h:00 A');
-var time3 = moment().add(7, "hours").format('h:00 A')
-var time4 = moment().add(8, "hours").format('h:00 A')
-var time5 = moment().add(9, "hours").format('h:00 A')
+var time10 = moment().add(19, "hours").format('h:00 A');
+var time11 = moment().add(20, "hours").format('h:00 A');
+var time12 = moment().add(21, "hours").format('h:00 A');
+var time1 = moment().add(22, "hours").format('h:00 A');
+var time2 = moment().add(23, "hours").format('h:00 A');
+var time3 = moment().add(24, "hours").format('h:00 A')
+var time4 = moment().add(25, "hours").format('h:00 A')
+var time5 = moment().add(26, "hours").format('h:00 A')
 
 // append increment time to time slots on page 
 $(".time9").append("<p>" + time9 + "</p>")
@@ -47,8 +45,8 @@ $(".time3").append("<p>" + time3 + "</p>")
 $(".time4").append("<p>" + time4 + "</p>")
 $(".time5").append("<p>" + time5 + "</p>")
 
-console.log(time9)
-console.log(typeof "time9")
+// console.log(time9)
+// console.log(typeof "time9")
 
 
 
