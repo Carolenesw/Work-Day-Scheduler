@@ -128,7 +128,61 @@ $(document).ready(function () {
         } else {
             $(".second-time").attr("style", "background-color: grey")
         }
+        if (timeSlots === timeCompare[2]) {
+            $(".third-time").attr("style", "background-color: red")
+        } else if (timeSlots < timeCompare[2]) {
+            $(".third-time").attr("style", "background-color: green")
+        } else {
+            $(".third-time").attr("style", "background-color: grey")
+        }
 
+        if (timeSlots === timeCompare[3]) {
+            $(".fouth-time").attr("style", "background-color: red")
+        } else if (timeSlots < timeCompare[3]) {
+            $(".fourth-time").attr("style", "background-color: green")
+        } else {
+            $(".fourth-time").attr("style", "background-color: grey")
+        }
+
+        if (timeSlots === timeCompare[4]) {
+            $(".fouth-time").attr("style", "background-color: red")
+        } else if (timeSlots < timeCompare[4]) {
+            $(".fifth-time").attr("style", "background-color: green")
+        } else {
+            $(".fifth-time").attr("style", "background-color: grey")
+        }
+
+        if (timeSlots === timeCompare[5]) {
+            $(".sixth-time").attr("style", "background-color: red")
+        } else if (timeSlots < timeCompare[5]) {
+            $(".sixth-time").attr("style", "background-color: green")
+        } else {
+            $(".sixth-time").attr("style", "background-color: grey")
+        }
+
+        if (timeSlots === timeCompare[6]) {
+            $(".seventh-time").attr("style", "background-color: red")
+        } else if (timeSlots < timeCompare[6]) {
+            $(".seventh-time").attr("style", "background-color: green")
+        } else {
+            $(".seventh-time").attr("style", "background-color: grey")
+        }
+
+        if (timeSlots === timeCompare[7]) {
+            $(".eighth-time").attr("style", "background-color: red")
+        } else if (timeSlots < timeCompare[7]) {
+            $(".eighth-time").attr("style", "background-color: green")
+        } else {
+            $(".eighth-time").attr("style", "background-color: grey")
+        }
+
+        if (timeSlots === timeCompare[8]) {
+            $(".ninth-time").attr("style", "background-color: red")
+        } else if (timeSlots < timeCompare[8]) {
+            $(".ninth-time").attr("style", "background-color: green")
+        } else {
+            $(".ninth-time").attr("style", "background-color: grey")
+        }
         //  create loop to loop through times
         // for (var i = 0; i < timeS.length; i++) {
         //     console.log("good morning, it is" + timeS[i])
