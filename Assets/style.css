@@ -3,9 +3,17 @@
   font-size: 16px;
   line-height: 1;
 }
+#head {
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+ margin-bottom: 5px;
+  background-color: cadetblue;
+}
 
 textarea{
   background: transparent;
+  text-align: center;
   border: none;
   resize: none;
   color: #000000;
@@ -21,8 +29,11 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
+.lead{
   white-space: pre-wrap;
+  color: cadetblue;
+  font-weight: 800;
+
 }
 
 .time-block{
@@ -36,7 +47,7 @@ textarea{
   border-top: 1px solid white;;
 }
 
-.hour {
+#currentDayhour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
@@ -57,7 +68,7 @@ textarea{
   color: white;
 }
 
-.saveBtn {
+.save {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -65,7 +76,7 @@ textarea{
   color: white;
 }
 
-.saveBtn i:hover {
+.save i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }

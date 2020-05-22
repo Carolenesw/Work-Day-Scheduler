@@ -51,7 +51,6 @@ $(document).ready(function () {
 
     });
 
-
     function colorBlocks() {
         // use military to use to compare times for coloring 
         var currentTime = moment().hours();
@@ -74,117 +73,9 @@ $(document).ready(function () {
     }
     colorBlocks();
 
-
+//get items from local storage 
     $("#17 .text").val(localStorage.getItem("17"));
 });
-    //var indexI = 0;
-    // get times from local storage for color blocks
-    // for (var i = 0; i < timeCompare.length; i++) {
-    //     console.log(timeCompare[i])
-    //     console.log(timeSlots)
-    //     if(timeCompare[i] === timeSlots ) {
-    //         $(".first-time").attr("style", "background-color: red")
-    //         } 
-    //        else if (timeCompare[i] != timeSlots && timeSlots > timeCompare[i]) {
-    //             $(".first-time").attr("style", "background-color: green")
-    //         } else {
-    //             $(".first-time").attr("style", "background-color: grey")
 
-    //             // console.log("good morning, it is " + timeCompare[i])
-    //     }
-    // }
-
-
-    // colorBlocks1()
-    // function colorBlocks1() {
-        // if (timeSlots === timeCompare[0]) {
-        //     console.log(timeCompare[0])
-        //     $(".first-time").attr("style", "background-color: red")
-        // } else if (timeSlots < timeCompare[0]) {
-        //     $(".first-time").attr("style", "background-color: green")
-        // } else {
-        //     $(".first-time").attr("style", "background-color: grey")
-        // }
-
-        // if (timeSlots === timeCompare[1]) {
-        //     $(".second-time").attr("style", "background-color: red")
-        // } else if (timeSlots < timeCompare[1]) {
-        //     $(".second-time").attr("style", "background-color: green")
-        // } else {
-        //     $(".second-time").attr("style", "background-color: grey")
-        // }
-        // if (timeSlots === timeCompare[2]) {
-        //     $(".third-time").attr("style", "background-color: red")
-        // } else if (timeSlots < timeCompare[2]) {
-        //     $(".third-time").attr("style", "background-color: green")
-        // } else {
-        //     $(".third-time").attr("style", "background-color: grey")
-        // }
-
-        // if (timeSlots === timeCompare[3]) {
-        //     $(".fouth-time").attr("style", "background-color: red")
-        // } else if (timeSlots < timeCompare[3]) {
-        //     $(".fourth-time").attr("style", "background-color: green")
-        // } else {
-        //     $(".fourth-time").attr("style", "background-color: grey")
-        // }
-
-        // if (timeSlots === timeCompare[4]) {
-        //     $(".fouth-time").attr("style", "background-color: red")
-        // } else if (timeSlots < timeCompare[4]) {
-        //     $(".fifth-time").attr("style", "background-color: green")
-        // } else {
-        //     $(".fifth-time").attr("style", "background-color: grey")
-        // }
-
-        // if (timeSlots === timeCompare[5]) {
-        //     $(".sixth-time").attr("style", "background-color: red")
-        // } else if (timeSlots < timeCompare[5]) {
-        //     $(".sixth-time").attr("style", "background-color: green")
-        // } else {
-        //     $(".sixth-time").attr("style", "background-color: grey")
-        // }
-
-        // if (timeSlots === timeCompare[6]) {
-        //     $(".seventh-time").attr("style", "background-color: red")
-        // } else if (timeSlots < timeCompare[6]) {
-        //     $(".seventh-time").attr("style", "background-color: green")
-        // } else {
-        //     $(".seventh-time").attr("style", "background-color: grey")
-        // }
-
-        // if (timeSlots === timeCompare[7]) {
-        //     $(".eighth-time").attr("style", "background-color: red")
-        // } else if (timeSlots < timeCompare[7]) {
-        //     $(".eighth-time").attr("style", "background-color: green")
-        // } else {
-        //     $(".eighth-time").attr("style", "background-color: grey")
-        // }
-
-        // if (timeSlots === timeCompare[8]) {
-        //     $(".ninth-time").attr("style", "background-color: red")
-        // } else if (timeSlots < timeCompare[8]) {
-        //     $(".ninth-time").attr("style", "background-color: green")
-        // } else {
-        //     $(".ninth-time").attr("style", "background-color: grey")
-        // }
-
-
-        // for (var i = 0; i < timeCompare.length; i++) {
-        //     console.log("good morning, it is " + timeCompare[i])
-            //  use switch statement for color block coding
-            // switch (timeSlots) {
-            //     case timeCompare[i]:
-            //         $(".first-time").attr("style", "background-color: red");
-            //     case timeCompare[i]:
-            //         $(".first-time").attr("style", "background-color: green");
-            //     default:
-            //         $(".first-time").attr("style", "background-color: grey");
-            //         console.log(timeSlots)
-            // }
-
-
-
-//load saved data from local storage
 
 
