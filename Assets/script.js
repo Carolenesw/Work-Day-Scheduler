@@ -50,20 +50,12 @@ $(document).ready(function () {
         event.preventDefault();
 
 
-        // var textArea = $(".text").val();
-        // console.log(textArea)
-
-        // var note = $(this).siblings(".description").val();
-        // var time = $(this).parent().attr("id");
-
-
-        // var textArea = $(this).parent().parent().children().attr("td");
-        // var textArea = $(this).siblings('input[textarea]').val();
-        // $(this).siblings('input[name=bidbutton]');
+        var textArea = $(this).parent().parent().find("textarea").val();
         var time = $(this).parent().parent().attr("id");
         console.log(time)
         console.log(textArea)
-        localStorage.setItem(textArea, time);
+        localStorage.setItem("time", time);
+        localStorage.setItem("text", textArea);
 
         // https://www.w3schools.com/tags/att_data-.asp 
 
