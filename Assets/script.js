@@ -34,20 +34,44 @@ $(document).ready(function () {
     $(".time5").append("<p>" + time5 + "</p>")
 
 
+    //get items from local storage 
+    $("#9 .text").val(localStorage.getItem("9"));
+    $("#10 .text").val(localStorage.getItem("10"));
+    $("#11 .text").val(localStorage.getItem("11"));
+    $("#12 .text").val(localStorage.getItem("12"));
+    $("#13 .text").val(localStorage.getItem("13"));
+    $("#14 .text").val(localStorage.getItem("14"));
+    $("#15 .text").val(localStorage.getItem("15"));
+    $("#16 .text").val(localStorage.getItem("16"));
+    $("#17 .text").val(localStorage.getItem("17"));
+
     // add input data to local storage when click on save on button
     $(".save").on("click", function (event) {
         event.preventDefault();
 
-        var textArea = $(this).siblings(".text").val();
-        var memoryTime = $(this).parent().attr("id");
+
+        // var textArea = $(".text").val();
+        // console.log(textArea)
+
+        // var note = $(this).siblings(".description").val();
+        // var time = $(this).parent().attr("id");
+
+
+        // var textArea = $(this).parent().parent().children().attr("td");
+        // var textArea = $(this).siblings('input[textarea]').val();
+        // $(this).siblings('input[name=bidbutton]');
+        var time = $(this).parent().parent().attr("id");
+        console.log(time)
         console.log(textArea)
-        console.log(memoryTime)
+        localStorage.setItem(textArea, time);
+
+        // https://www.w3schools.com/tags/att_data-.asp 
 
         if (textArea === "") {
             alert("Please enter data")
         }
 
-        localStorage.setItem(textArea, memoryTime);
+
 
     });
 
@@ -73,8 +97,7 @@ $(document).ready(function () {
     }
     colorBlocks();
 
-//get items from local storage 
-    $("#17 .text").val(localStorage.getItem("17"));
+
 });
 
 

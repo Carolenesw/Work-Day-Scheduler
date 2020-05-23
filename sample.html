@@ -52,7 +52,7 @@
         </tr>
         <tr class="time" id="10">
           <th scope="row" class="time10" ></th>
-          <td><textarea name="text" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
+          <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
           <td><img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"></td>
         </tr>
         <tr class="time" id="11">
@@ -100,6 +100,91 @@
 
   <script src="./Assets/script.js"></script>
 
+
+  $(document).ready(function () {
+
+    // use moment.js to add current time to page
+    var currentTime = moment().format('LLLL');
+    console.log(currentTime)
+
+    // var timeSlots = (moment().format('h:00 A'));
+    // console.log(timeSlots)
+
+    // use momentjs to create set time block of the day per hour
+    var year = 2020;
+    var month = 5;
+    // var startTime = moment(year + '-' + month + '-' + ' 00:00').format('h:00 A')
+    var time9 = moment(year + '-' + month + '-' + ' 09:00').format('h:00 A');
+    var time10 = moment(year + '-' + month + '-' + ' 10:00').format('h:00 A');
+    var time11 = moment(year + '-' + month + '-' + ' 11:00').format('h:00 A');
+    var time12 = moment(year + '-' + month + '-' + ' 12:00').format('h:00 A');
+    var time1 = moment(year + '-' + month + '-' + ' 01:00 PM').format('h:00 A');
+    var time2 = moment(year + '-' + month + '-' + ' 02:00 PM').format('h:00 A');
+    var time3 = moment(year + '-' + month + '-' + ' 03:00 PM').format('h:00 A');
+    var time4 = moment(year + '-' + month + '-' + ' 04:00 PM').format('h:00 A');
+    var time5 = moment(year + '-' + month + '-' + ' 05:00 PM').format('h:00 A');
+
+    // append current time and current time blocks on page 
+    $("#currentDay").append(currentTime);
+    $(".time9").append("<p>" + time9 + "</p>")
+    $(".time10").append("<p>" + time10 + "</p>")
+    $(".time11").append("<p>" + time11 + "</p>")
+    $(".time12").append("<p>" + time12 + "</p>")
+    $(".time1").append("<p>" + time1 + "</p>")
+    $(".time2").append("<p>" + time2 + "</p>")
+    $(".time3").append("<p>" + time3 + "</p>")
+    $(".time4").append("<p>" + time4 + "</p>")
+    $(".time5").append("<p>" + time5 + "</p>")
+
+
+    // add input data to local storage when click on save on button
+    $(".save").on("click", function (event) {
+        event.preventDefault();
+       
+
+        var textArea = $(".text").val();
+        console.log(textArea)
+            
+        var note = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+
+        var textArea = $(this).siblings(".text").val();
+        var Time = $(this).parent().attr("id");
+
+
+        if (textArea === "") {
+            alert("Please enter data")
+        }
+
+        localStorage.setItem(textArea, time);
+
+    });
+
+    function colorBlocks() {
+        // use military to use to compare times for coloring 
+        var currentTime = moment().hours();
+
+        // use parseInt to parse my id into an integer for comparisson 
+        $(".time").each(function () {
+            var timeCompare = parseInt($(this).attr("id"));
+            // use .this to link to parent class and use .add and .remove methods to add css classes
+            if (currentTime > timeCompare) {
+                $(this).addClass("past");
+            } else if (currentTime === timeCompare) {
+                $(this).removeClass("past");
+                $(this).addClass("present");
+            } else {
+                $(this).removeClass("past");
+                $(this).removeClass("present");
+                $(this).addClass("future");
+            }
+        });
+    }
+    colorBlocks();
+
+    //get items from local storage 
+    $("#17 .text").val(localStorage.getItem("17"));
+});
 </body>
 
 </html>
