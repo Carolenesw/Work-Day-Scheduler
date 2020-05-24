@@ -95,18 +95,12 @@ $(document).ready(function () {
         });
     }
 
-    var theParent = document.querySelector("#tableSave");
-    theParent.addEventListener("click", buttonStuff, false);
-    function buttonStuff (e) {
-      if (e.target !== e.currentTarget) {
-        //var clickeditem = e.target.id;
-        var meetDeets = document.getElementById("mtgDetail1").value;
-        localStorage.setItem("A", meetDeets);
-      } else
-       if (e.target !== e.currentTarget) {
-        //var clickeditem = e.target.id;
-        var meetDeets = document.getElementById("mtgDetail2").value;
-        localStorage.setItem("B", meetDeets);
-      } else
+    var text = document.getElementById("box10");
+    var btnInsert = document.getElementById("save10am");
+    btnInsert.onclick = function() {
+        var info = text.value;
+        localStorage.setItem("text", info.value);
+        var again = localStorage.getItem("text"); 
+        console.log(again)
     
 });
