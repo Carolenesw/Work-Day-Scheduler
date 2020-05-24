@@ -4,13 +4,12 @@ $(document).ready(function () {
     var currentTime = moment().format('LLLL');
     console.log(currentTime)
 
-    // var timeSlots = (moment().format('h:00 A'));
-    // console.log(timeSlots)
+    // function calls 
+    colorBlocks();
 
-    // use momentjs to create set time block of the day per hour
+    // use momentjs to create set time block for each hour
     var year = 2020;
     var month = 5;
-    // var startTime = moment(year + '-' + month + '-' + ' 00:00').format('h:00 A')
     var time9 = moment(year + '-' + month + '-' + ' 09:00').format('h:00 A');
     var time10 = moment(year + '-' + month + '-' + ' 10:00').format('h:00 A');
     var time11 = moment(year + '-' + month + '-' + ' 11:00').format('h:00 A');
@@ -21,51 +20,44 @@ $(document).ready(function () {
     var time4 = moment(year + '-' + month + '-' + ' 04:00 PM').format('h:00 A');
     var time5 = moment(year + '-' + month + '-' + ' 05:00 PM').format('h:00 A');
 
-    // append current time and current time blocks on page 
+    // append current time and time blocks on page 
     $("#currentDay").append(currentTime);
-    $(".time9").append("<p>" + time9 + "</p>")
-    $(".time10").append("<p>" + time10 + "</p>")
-    $(".time11").append("<p>" + time11 + "</p>")
-    $(".time12").append("<p>" + time12 + "</p>")
-    $(".time1").append("<p>" + time1 + "</p>")
-    $(".time2").append("<p>" + time2 + "</p>")
-    $(".time3").append("<p>" + time3 + "</p>")
-    $(".time4").append("<p>" + time4 + "</p>")
-    $(".time5").append("<p>" + time5 + "</p>")
-
-
-    //get items from local storage 
-    $("#9 .text").val(localStorage.getItem("9"));
-    $("#10 .text").val(localStorage.getItem("10"));
-    $("#11 .text").val(localStorage.getItem("11"));
-    $("#12 .text").val(localStorage.getItem("12"));
-    $("#13 .text").val(localStorage.getItem("13"));
-    $("#14 .text").val(localStorage.getItem("14"));
-    $("#15 .text").val(localStorage.getItem("15"));
-    $("#16 .text").val(localStorage.getItem("16"));
-    $("#17 .text").val(localStorage.getItem("17"));
+    $(".time9").append("<p>" + time9 + "</p>");
+    $(".time10").append("<p>" + time10 + "</p>");
+    $(".time11").append("<p>" + time11 + "</p>");
+    $(".time12").append("<p>" + time12 + "</p>");
+    $(".time1").append("<p>" + time1 + "</p>");
+    $(".time2").append("<p>" + time2 + "</p>");
+    $(".time3").append("<p>" + time3 + "</p>");
+    $(".time4").append("<p>" + time4 + "</p>");
+    $(".time5").append("<p>" + time5 + "</p>");
 
     // add input data to local storage when click on save on button
     $(".save").on("click", function (event) {
         event.preventDefault();
 
-
+        // use parent and find method to select descendents for onclick selection
         var textArea = $(this).parent().parent().find("textarea").val();
         var time = $(this).parent().parent().attr("id");
-        console.log(time)
-        console.log(textArea)
+
+        // set time and textarea to local storage
         localStorage.setItem("time", time);
         localStorage.setItem("text", textArea);
 
-        // https://www.w3schools.com/tags/att_data-.asp 
-
+        // create alert message if textarea is empty before saving
         if (textArea === "") {
-            alert("Please enter data")
+            alert("Please enter text before saving");
         }
-
-
-
+       
     });
+
+    rendTask();
+    function rendTask() {
+        // get items from localStorage
+        var time = localStorage.getItem("time");
+        var text = localStorage.getItem("text")
+
+    }
 
     function colorBlocks() {
         // use military to use to compare times for coloring 
@@ -87,10 +79,5 @@ $(document).ready(function () {
             }
         });
     }
-    colorBlocks();
-
 
 });
-
-
-
