@@ -4,7 +4,7 @@ $(document).ready(function () {
     var currentTime = moment().format('LLLL');
     console.log(currentTime)
 
-    // function calls 
+    // function call
     colorBlocks();
 
     // use momentjs to create set time block for each hour
@@ -32,10 +32,6 @@ $(document).ready(function () {
     $(".time4").append("<p>" + time4 + "</p>");
     $(".time5").append("<p>" + time5 + "</p>");
 
-    //get items from local storage 
-    // $("#9 .text").val(localStorage.getItem("9"));
-
-
     // add input data to local storage when click on save on button
     $(".save").on("click", function (event) {
         event.preventDefault();
@@ -44,10 +40,7 @@ $(document).ready(function () {
         var textArea = $(this).parent().parent().find("textarea").val();
         var time = $(this).parent().parent().attr("id");
 
-        // set time and textarea to local storage
-        // localStorage.setItem("time", time);
-        // localStorage.setItem("text", textArea);
-
+        // add items to local Storage
         localStorage.setItem(time, textArea);
 
         // create alert message if textarea is empty before saving
@@ -68,7 +61,6 @@ $(document).ready(function () {
         $("#15 .text").val(localStorage.getItem("15"));
         $("#16 .text").val(localStorage.getItem("16"));
         $("#17 .text").val(localStorage.getItem("17"));
-
 
     }
 
