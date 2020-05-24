@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="stylesheet" href="./Assets/style.css">
+  <!-- add google fonts for styling  -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- add moment.js file to load date -->
+
+  <script src="./Assets/library/moment.min.js"></script>
+
+  <!-- add bootsrap link and jquery link to page -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar for scheduling your work day</p>
+    <h2 id="currentDay" class="lead"> </h2>
+  </header>
+  <div class="container">
+    <!-- use tabel to create day planner and use input field to collect data  -->
+    <div class="table-responsive-lg">
+      <table class="table">
+      
+    <!-- <table class="table table-bordered"> -->
+      <div class="row"> 
+      <!-- <thead> -->
+        <tr id="head">
+          <div class="row">
+          <th scope="col">Time</th>
+          <th scope="col">To Do Activities</th>
+          <th scope="col">Save</th>
+        </div>
+        </tr>
+      
+      <!-- </thead> -->
+    </div>
+    <div>
+      <tbody class="body">
+        <!-- use miltary time and set them as id to call to compare for my time blocks -->
+        <tr class="time" id="9">
+          <th scope="row" class="time9" ></th>
+          <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
+          <td> <img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"> </td>
+        </tr>
+        <tr class="time" id="10">
+          <th scope="row" class="time10" ></th>
+          <td><textarea name="text" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
+          <td><img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"></td>
+        </tr>
+        <tr class="time" id="11">
+          <th scope="row" class="time11"></th>
+          <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
+          <td><img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"></td>
+        </tr>
+        <tr class="time" id="12">
+          <th scope="row" class="time12"></th>
+          <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
+          <td><img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"></td>
+        </tr>
+        <tr class="time" id="13">
+          <th scope="row" class="time1"></th>
+          <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
+          <td><img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"></td>
+        </tr>
+        <tr class="time" id="14">
+          <th scope="row" class="time2"></th>
+          <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
+          <td><img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"></td>
+        </tr>
+        <tr class="time" id="15">
+          <th scope="row" class="time3"></th>
+          <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
+          <td><img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"></td>
+        </tr>
+        <tr class="time" id="16">
+          <th scope="row" class="time4"></th>
+          <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
+          <td><img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"></td>
+        </tr>
+        <tr class="time" id="17">
+          <th scope="row" class="time5" ></th>
+          <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
+          <td><img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"></td>
+        </tr>
+      </tbody>
+    </div>
+    </table>
+  </div>
+</div>
+
+</div>
+  <script src="./Assets/script.js"></script>
+
+</body>
+
+</html>
