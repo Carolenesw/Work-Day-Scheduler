@@ -32,6 +32,10 @@ $(document).ready(function () {
     $(".time4").append("<p>" + time4 + "</p>");
     $(".time5").append("<p>" + time5 + "</p>");
 
+    //get items from local storage 
+    // $("#9 .text").val(localStorage.getItem("9"));
+
+
     // add input data to local storage when click on save on button
     $(".save").on("click", function (event) {
         event.preventDefault();
@@ -41,21 +45,30 @@ $(document).ready(function () {
         var time = $(this).parent().parent().attr("id");
 
         // set time and textarea to local storage
-        localStorage.setItem("time", time);
-        localStorage.setItem("text", textArea);
+        // localStorage.setItem("time", time);
+        // localStorage.setItem("text", textArea);
+
+        localStorage.setItem(time, textArea);
 
         // create alert message if textarea is empty before saving
         if (textArea === "") {
             alert("Please enter text before saving");
         }
-       
+
     });
 
     rendTask();
     function rendTask() {
-        // get items from localStorage
-        var time = localStorage.getItem("time");
-        var text = localStorage.getItem("text")
+        $("#9 .text").val(localStorage.getItem("9"));
+        $("#10 .text").val(localStorage.getItem("10"));
+        $("#11 .text").val(localStorage.getItem("11"));
+        $("#12 .text").val(localStorage.getItem("12"));
+        $("#13 .text").val(localStorage.getItem("13"));
+        $("#14 .text").val(localStorage.getItem("15"));
+        $("#15 .text").val(localStorage.getItem("15"));
+        $("#16 .text").val(localStorage.getItem("16"));
+        $("#17 .text").val(localStorage.getItem("17"));
+
 
     }
 
