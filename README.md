@@ -30,5 +30,5 @@ Create a daily planner application that allows user to save events/to do items f
 
 https://carolenesw.github.io/Work-Day-Scheduler/
 
-![JavaScript-Code-Quiz]("")
+![JavaScript-Work-Day-Scheduler]("")
 

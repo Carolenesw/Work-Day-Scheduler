@@ -31,18 +31,23 @@
   </header>
   <div class="container">
     <!-- use tabel to create day planner and use input field to collect data  -->
-    <div class="table-responsive-md">
+    <div class="table-responsive-lg">
       <table class="table">
       
-    <table class="table table-bordered">
-      <thead>
+    <!-- <table class="table table-bordered"> -->
+      <div class="row"> 
+      <!-- <thead> -->
         <tr id="head">
+          <div class="row">
           <th scope="col">Time</th>
           <th scope="col">To Do Activities</th>
           <th scope="col">Save</th>
+        </div>
         </tr>
       
-      </thead>
+      <!-- </thead> -->
+    </div>
+    <div>
       <tbody class="body">
         <!-- use miltary time and set them as id to call to compare for my time blocks -->
         <tr class="time" id="9">
@@ -89,15 +94,14 @@
           <th scope="row" class="time5" ></th>
           <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
           <td><img class="save" src="./Assets/image/Save-icon.png" width="30" alt="save button with arrow"></td>
-       
         </tr>
-
       </tbody>
+    </div>
     </table>
   </div>
 </div>
 
-
+</div>
   <script src="./Assets/script.js"></script>
 
 </body>
