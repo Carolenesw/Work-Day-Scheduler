@@ -28,7 +28,8 @@ Create a daily planner application that allows user to save events/to do items f
 
 ## link
 
-https://carolenesw.github.io/Work-Day-Scheduler/
+https://carolenesw.github.io/Weather-Dashboard/
 
-![JavaScript-Work-Day-Scheduler]("")
-
+## Image
+<img src="Assets/image/scheduler.png">
+    

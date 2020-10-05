@@ -50,8 +50,9 @@ $(document).ready(function () {
 
     });
 
-    rendTask();
+    
     function rendTask() {
+        // call and render items on page using id's and class from local storage 
         $("#9 .text").val(localStorage.getItem("9"));
         $("#10 .text").val(localStorage.getItem("10"));
         $("#11 .text").val(localStorage.getItem("11"));
@@ -63,6 +64,7 @@ $(document).ready(function () {
         $("#17 .text").val(localStorage.getItem("17"));
 
     }
+    rendTask();
 
     function colorBlocks() {
         // use military to use to compare times for coloring 
